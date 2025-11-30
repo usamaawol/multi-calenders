@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multi-Calendar</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">Multi-Calendar</div>
+        <div class="controls">
+          <!-- Calendar type selector -->
+          <select id="calendarSelect" aria-label="Choose calendar">
+            <option value="gregorian">Gregorian</option>
+            <option value="ethiopian">Ethiopian</option>
+            <option value="hijri">Hijri</option>
+          </select>
+
+          <!-- Month and year selectors -->
+          <select id="monthSelect" aria-label="Choose month"></select>
+          <select id="yearSelect" aria-label="Choose year"></select>
+        </div>
+      </header>
+
+      <main class="calendar-area">
+        <div class="nav">
+          <button id="prevBtn">‹</button>
+          <div id="monthLabel" class="month-label">Month Year</div>
+          <button id="nextBtn">›</button>
+        </div>
+
+        <div id="calendar" class="calendar"></div>
+      </main>
+
+      <div id="eventModal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content">
+          <button id="closeModal" class="close">✕</button>
+          <div id="modalTitle" class="modal-title"></div>
+          <div id="modalBody" class="modal-body"></div>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <small>Supports Gregorian, Ethiopian, and Hijri calendars — conversions are approximate for demo purposes.</small>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
